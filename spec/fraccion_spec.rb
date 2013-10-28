@@ -103,28 +103,28 @@ describe Fraccion do
 		end
 	end
 	
-	describe "Comprobar fracción mayor que otra" do
+	describe "Comprobar fraccion mayor que otra" do
 		it "fraccion A mayor que B?" do
 			res = @F > @F1
 			res.should eq(true)
 		end
 	end
 	
-	describe "Comprobar fracción menor que otra" do
+	describe "Comprobar fraccion menor que otra" do
 		it "fraccion A menor que B?" do
 			res = @F < @F1
 			res.should eq(false)
 		end
 	end
 	
-	describe "Comprobar fracción mayor o igual que otra" do
+	describe "Comprobar fraccion mayor o igual que otra" do
 		it "fraccion A mayor o igual que B?" do
 			res = @F >= @F1
 			res.should eq(true)
 		end
 	end
 	
-	describe "Comprobar fracción menor o igual que otra" do
+	describe "Comprobar fraccion menor o igual que otra" do
 		it "fraccion A menor o igual que B?" do
 			res = @F <= @F1
 			res.should eq(false)
