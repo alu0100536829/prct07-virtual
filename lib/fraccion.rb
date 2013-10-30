@@ -133,6 +133,7 @@ class Fraccion
 		return r	
 	end
 
+	#Método sobreescrito del módulo Comparable que permite usar los comparadores (<, >, ==, <=, >=, between?)
 	def <=> (other)
 		self.to_f <=> other.to_f
 	end
