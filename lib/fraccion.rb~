@@ -13,7 +13,7 @@
 ***********************************************************
 =end
 
-require "./lib/gcd.rb"
+require "lib/gcd.rb"
 
 class Fraccion
 	attr_reader :a, :b #a: numerador, b: denominador
