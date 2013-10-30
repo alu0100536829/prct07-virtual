@@ -8,8 +8,11 @@
 * Tercero de Grado en Ingeniería Informática
 * Universidad de la Laguna
 *
-* Practica 07: Desarrollo de una clase fraccion utilizando 
-*  el desarrollo dirigido por pruebas 
+* Practica 07: Realice las modificaciones oportunas 
+*   sobre la Practica 06 para contemplar el uso del 
+*   módulo Comparable. Ademas La clase se ha de 
+*   compilar con la herramienta Travis de 
+*   integración continua
 ***********************************************************
 =end
 
