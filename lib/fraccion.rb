@@ -8,7 +8,7 @@
 * Tercero de Grado en Ingeniería Informática
 * Universidad de la Laguna
 *
-* Practica 06: Desarrollo de una clase fraccion utilizando 
+* Practica 07: Desarrollo de una clase fraccion utilizando 
 *  el desarrollo dirigido por pruebas 
 ***********************************************************
 =end
@@ -16,6 +16,7 @@
 require "./lib/gcd.rb"
 
 class Fraccion
+	include Comparable
 	attr_reader :a, :b #a: numerador, b: denominador
 	def initialize(a,b)
 		#comprobamos que los datos de entradas sean numericos
@@ -44,14 +45,14 @@ class Fraccion
 		@a.to_f / @b.to_f #conversion de tipo a flotante mediante to_f
 	end
 
-	#Comprueba si son iguales dos fracciones
-	def == (other)
-		if(@a == other.num) && (@b == other.denom)
-			return true 
-		else 
-			return false
-		end
-	end
+	# #Comprueba si son iguales dos fracciones
+	# def == (other)
+	# 	if(@a == other.num) && (@b == other.denom)
+	# 		return true 
+	# 	else 
+	# 		return false
+	# 	end
+	# end
 	
 	#Fracción pasada a float. (ej: 1.25)
 	def abs
@@ -128,41 +129,47 @@ class Fraccion
 		end
 		return r	
 	end
+
+	def <=>(other)
+    	@a * other.denom <=>  @b * other.num
+  	end
 	
-	#Comprueba si fracción es mayor que otra
-	def > (other)
-		if (self.to_f > other.to_f)
-			return true
-		else
-			return false
-		end
-	end
+	# #Comprueba si fracción es mayor que otra
+	# def > (other)
+	# 	if (self.to_f > other.to_f)
+	# 		return true
+	# 	else
+	# 		return false
+	# 	end
+	# end
 	
-	#Comprueba si fracción es menor que otra
-	def < (other)
-		if (self.to_f < other.to_f)
-			return true
-		else
-			return false
-		end
-	end
+	# #Comprueba si fracción es menor que otra
+	# def < (other)
+	# 	if (self.to_f < other.to_f)
+	# 		return true
+	# 	else
+	# 		return false
+	# 	end
+	# end
 	
-	#Comprueba si fracción es mayor o igual que otra
-	def >= (other)
-		if (self.to_f >= other.to_f)
-			return true
-		else
-			return false
-		end
-	end
+	# #Comprueba si fracción es mayor o igual que otra
+	# def >= (other)
+	# 	if (self.to_f >= other.to_f)
+	# 		return true
+	# 	else
+	# 		return false
+	# 	end
+	# end
 	
-	#Comprueba si fracción es menor o igual que otra
-	def <= (other)
-		if (self.to_f <= other.to_f)
-			return true
-		else
-			return false
-		end
-	end
+	# #Comprueba si fracción es menor o igual que otra
+	# def <= (other)
+	# 	if (self.to_f <= other.to_f)
+	# 		return true
+	# 	else
+	# 		return false
+	# 	end
+	# end
+
+	
 
 end
