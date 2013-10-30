@@ -133,9 +133,9 @@ class Fraccion
 		return r	
 	end
 
-	def <=>(other)
-    	@a * other.denom <=>  @b * other.num
-  	end
+	def <=> (other)
+		self.to_f <=> other.to_f
+	end
 	
 	# #Comprueba si fracción es mayor que otra
 	# def > (other)

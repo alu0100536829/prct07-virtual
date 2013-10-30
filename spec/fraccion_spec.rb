@@ -42,12 +42,7 @@ describe Fraccion do
 		end
 	end
 	
-	describe "# Igualdad de fracciones" do
-		it "Se comprueba si son iguales las fracciones" do
-			res = @F == @F1
-			res.should eq(false)	
-		end
-	end
+	
 	
 	describe "# Valor absoluto de la fraccion" do
 		it "Halla valor absoluto" do
@@ -104,31 +99,43 @@ describe Fraccion do
 	end
 	
 	describe "Comprobar fraccion mayor que otra" do
-		it "fraccion A mayor que B?" do
+		it "fraccion 3/2 mayor que 5/4?" do
 			res = @F > @F1
 			res.should eq(true)
 		end
 	end
 	
 	describe "Comprobar fraccion menor que otra" do
-		it "fraccion A menor que B?" do
+		it "fraccion 3/2 menor que 5/4?" do
 			res = @F < @F1
 			res.should eq(false)
 		end
 	end
 	
 	describe "Comprobar fraccion mayor o igual que otra" do
-		it "fraccion A mayor o igual que B?" do
+		it "fraccion 3/5 mayor o igual que 5/4?" do
 			res = @F >= @F1
 			res.should eq(true)
 		end
 	end
 	
 	describe "Comprobar fraccion menor o igual que otra" do
-		it "fraccion A menor o igual que B?" do
+		it "fraccion 3/5 menor o igual que 5/4?" do
 			res = @F <= @F1
 			res.should eq(false)
 		end
 	end
-  	
+	describe "# Igualdad de fracciones" do
+		it "Se comprueba si 3/4 y 5/4 son iguales" do
+			res = @F == @F1
+			res.should eq(false)	
+		end
+	end
+  	describe "# Utilizacion del between" do
+		it "Se comprueba si 4/4 esta entre 3/4 y 5/4" do
+			F3 = Fraccion.new(4, 4)
+			res = F3.between?(@F, @F1)
+			res.should eq(false)	
+		end
+	end
 end
